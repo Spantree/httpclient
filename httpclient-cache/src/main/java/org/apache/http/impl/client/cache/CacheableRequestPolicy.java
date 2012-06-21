@@ -42,7 +42,7 @@ import org.apache.http.client.cache.HeaderConstants;
  * @since 4.1
  */
 @Immutable
-class CacheableRequestPolicy {
+public class CacheableRequestPolicy {
 
     private final Log log = LogFactory.getLog(getClass());
 

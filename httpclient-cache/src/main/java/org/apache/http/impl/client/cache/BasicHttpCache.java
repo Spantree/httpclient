@@ -49,7 +49,7 @@ import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.protocol.HTTP;
 
-class BasicHttpCache implements HttpCache {
+public class BasicHttpCache implements HttpCache {
 
     private final CacheKeyGenerator uriExtractor;
     private final ResourceFactory resourceFactory;

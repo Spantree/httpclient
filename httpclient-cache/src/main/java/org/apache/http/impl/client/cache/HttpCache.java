@@ -37,7 +37,7 @@ import org.apache.http.client.cache.HttpCacheEntry;
 /**
  * @since 4.1
  */
-interface HttpCache {
+public interface HttpCache {
 
     /**
      * Clear all matching {@link HttpCacheEntry}s.

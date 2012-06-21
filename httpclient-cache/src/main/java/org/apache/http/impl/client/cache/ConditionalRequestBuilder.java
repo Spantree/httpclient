@@ -43,7 +43,7 @@ import org.apache.http.impl.client.RequestWrapper;
  * @since 4.1
  */
 @Immutable
-class ConditionalRequestBuilder {
+public class ConditionalRequestBuilder {
 
     private static final Log log = LogFactory.getLog(ConditionalRequestBuilder.class);
 

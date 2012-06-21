@@ -47,7 +47,7 @@ import org.apache.http.impl.cookie.DateUtils;
  * @since 4.1
  */
 @Immutable
-class CachedResponseSuitabilityChecker {
+public class CachedResponseSuitabilityChecker {
 
     private final Log log = LogFactory.getLog(getClass());
 
@@ -57,7 +57,7 @@ class CachedResponseSuitabilityChecker {
     private final long heuristicDefaultLifetime;
     private final CacheValidityPolicy validityStrategy;
 
-    CachedResponseSuitabilityChecker(final CacheValidityPolicy validityStrategy,
+    public CachedResponseSuitabilityChecker(final CacheValidityPolicy validityStrategy,
             CacheConfig config) {
         super();
         this.validityStrategy = validityStrategy;
@@ -67,7 +67,7 @@ class CachedResponseSuitabilityChecker {
         this.heuristicDefaultLifetime = config.getHeuristicDefaultLifetime();
     }
 
-    CachedResponseSuitabilityChecker(CacheConfig config) {
+    public CachedResponseSuitabilityChecker(CacheConfig config) {
         this(new CacheValidityPolicy(), config);
     }
 

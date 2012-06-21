@@ -122,33 +122,33 @@ public class CachingHttpClient implements HttpClient {
 
     private final static boolean SUPPORTS_RANGE_AND_CONTENT_RANGE_HEADERS = false;
 
-    private final AtomicLong cacheHits = new AtomicLong();
-    private final AtomicLong cacheMisses = new AtomicLong();
-    private final AtomicLong cacheUpdates = new AtomicLong();
+    protected final AtomicLong cacheHits = new AtomicLong();
+    protected final AtomicLong cacheMisses = new AtomicLong();
+    protected final AtomicLong cacheUpdates = new AtomicLong();
 
     private final Map<ProtocolVersion, String> viaHeaders = new HashMap<ProtocolVersion, String>(4);
 
-    private final HttpClient backend;
-    private final HttpCache responseCache;
-    private final CacheValidityPolicy validityPolicy;
-    private final ResponseCachingPolicy responseCachingPolicy;
-    private final CachedHttpResponseGenerator responseGenerator;
-    private final CacheableRequestPolicy cacheableRequestPolicy;
-    private final CachedResponseSuitabilityChecker suitabilityChecker;
+    protected HttpClient backend;
+    protected HttpCache responseCache;
+    protected CacheValidityPolicy validityPolicy;
+    protected ResponseCachingPolicy responseCachingPolicy;
+    protected CachedHttpResponseGenerator responseGenerator;
+    protected CacheableRequestPolicy cacheableRequestPolicy;
+    protected CachedResponseSuitabilityChecker suitabilityChecker;
 
-    private final ConditionalRequestBuilder conditionalRequestBuilder;
+    protected ConditionalRequestBuilder conditionalRequestBuilder;
 
-    private final long maxObjectSizeBytes;
-    private final boolean sharedCache;
+    protected long maxObjectSizeBytes;
+    protected boolean sharedCache;
 
-    private final ResponseProtocolCompliance responseCompliance;
-    private final RequestProtocolCompliance requestCompliance;
+    protected ResponseProtocolCompliance responseCompliance;
+    protected RequestProtocolCompliance requestCompliance;
 
-    private final AsynchronousValidator asynchRevalidator;
+    protected AsynchronousValidator asynchRevalidator;
 
     private final Log log = LogFactory.getLog(getClass());
 
-    CachingHttpClient(
+    protected  CachingHttpClient(
             HttpClient client,
             HttpCache cache,
             CacheConfig config) {
@@ -264,7 +264,7 @@ public class CachingHttpClient implements HttpClient {
                 config);
     }
 
-    CachingHttpClient(
+    protected CachingHttpClient(
             HttpClient backend,
             CacheValidityPolicy validityPolicy,
             ResponseCachingPolicy responseCachingPolicy,
@@ -291,7 +291,7 @@ public class CachingHttpClient implements HttpClient {
         this.asynchRevalidator = makeAsynchronousValidator(config);
     }
 
-    private AsynchronousValidator makeAsynchronousValidator(
+    protected AsynchronousValidator makeAsynchronousValidator(
             CacheConfig config) {
         if (config.getAsynchronousWorkersMax() > 0) {
             return new AsynchronousValidator(this, config);

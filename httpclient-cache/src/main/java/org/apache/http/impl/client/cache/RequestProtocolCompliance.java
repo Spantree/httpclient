@@ -54,7 +54,7 @@ import org.apache.http.protocol.HTTP;
  * @since 4.1
  */
 @Immutable
-class RequestProtocolCompliance {
+public class RequestProtocolCompliance {
 
     private static final List<String> disallowedWithNoCache =
         Arrays.asList(HeaderConstants.CACHE_CONTROL_MIN_FRESH, HeaderConstants.CACHE_CONTROL_MAX_STALE, HeaderConstants.CACHE_CONTROL_MAX_AGE);

@@ -52,7 +52,7 @@ import org.apache.http.protocol.HTTP;
  * @since 4.1
  */
 @Immutable
-class ResponseCachingPolicy {
+public class ResponseCachingPolicy {
 
     private final long maxObjectSizeBytes;
     private final boolean sharedCache;

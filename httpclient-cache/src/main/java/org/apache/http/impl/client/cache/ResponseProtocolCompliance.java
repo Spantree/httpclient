@@ -54,7 +54,7 @@ import org.apache.http.util.EntityUtils;
  * @since 4.1
  */
 @Immutable
-class ResponseProtocolCompliance {
+public class ResponseProtocolCompliance {
 
     private static final String UNEXPECTED_100_CONTINUE = "The incoming request did not contain a "
                     + "100-continue header, but the response was a Status 100, continue.";

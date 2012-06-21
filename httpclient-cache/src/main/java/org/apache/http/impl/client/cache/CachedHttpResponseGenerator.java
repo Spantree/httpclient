@@ -47,16 +47,16 @@ import org.apache.http.protocol.HTTP;
  * @since 4.1
  */
 @Immutable
-class CachedHttpResponseGenerator {
+public class CachedHttpResponseGenerator {
 
     private final CacheValidityPolicy validityStrategy;
 
-    CachedHttpResponseGenerator(final CacheValidityPolicy validityStrategy) {
+    public CachedHttpResponseGenerator(final CacheValidityPolicy validityStrategy) {
         super();
         this.validityStrategy = validityStrategy;
     }
 
-    CachedHttpResponseGenerator() {
+    public CachedHttpResponseGenerator() {
         this(new CacheValidityPolicy());
     }
 

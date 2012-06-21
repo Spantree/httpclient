@@ -42,11 +42,11 @@ import org.apache.http.protocol.HTTP;
  * @since 4.1
  */
 @Immutable
-class CacheValidityPolicy {
+public class CacheValidityPolicy {
 
     public static final long MAX_AGE = 2147483648L;
 
-    CacheValidityPolicy() {
+    public CacheValidityPolicy() {
         super();
     }
 
