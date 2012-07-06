@@ -155,7 +155,7 @@
     <module>httpmime</module>
     <module>httpclient-cache</module>
     <module>fluent-hc</module>
-    <module>httpclient-osgi</module>
+    <!--<module>httpclient-osgi</module>-->
   </modules>
 
   <build>
