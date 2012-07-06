@@ -291,7 +291,7 @@ public class CachingHttpClient implements HttpClient {
         this.asynchRevalidator = makeAsynchronousValidator(config);
     }
 
-    protected AsynchronousValidator makeAsynchronousValidator(
+    private AsynchronousValidator makeAsynchronousValidator(
             CacheConfig config) {
         if (config.getAsynchronousWorkersMax() > 0) {
             return new AsynchronousValidator(this, config);
